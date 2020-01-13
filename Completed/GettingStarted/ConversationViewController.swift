@@ -177,7 +177,6 @@ class ConversationViewController: UIViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.inputTextField.isEnabled = true
                 self?.activityIndicator.stopAnimating()
-                self?.getEvents()
             }
         })
     }

@@ -126,13 +126,7 @@ class ConversationViewController: UIViewController {
         inputTextField.resignFirstResponder()
         inputTextField.isEnabled = false
         activityIndicator.startAnimating()
-        conversation?.sendText(message, completionHandler: { [weak self] (error) in
-            DispatchQueue.main.async { [weak self] in
-                self?.inputTextField.isEnabled = true
-                self?.activityIndicator.stopAnimating()
-                self?.getEvents()
-            }
-        })
+        
     }
 }
 
