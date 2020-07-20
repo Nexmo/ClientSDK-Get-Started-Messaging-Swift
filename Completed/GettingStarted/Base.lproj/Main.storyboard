@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F2o-p8-PHJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F2o-p8-PHJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,11 +29,11 @@
                                     <constraint firstAttribute="height" constant="44" id="a5v-Q6-pNF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Login as Jane">
+                                <state key="normal" title="Login as Alice">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginAsJane:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dW5-R8-Kil"/>
+                                    <action selector="loginAsAlice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbe-Rf-eSC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez8-xq-5g1">
@@ -43,11 +43,11 @@
                                     <constraint firstAttribute="height" constant="44" id="Bx5-Rb-3oF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Login as Joe">
+                                <state key="normal" title="Login as Bob">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginAsJoe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cgl-rz-tAj"/>
+                                    <action selector="loginAsBob:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cub-tB-z98"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tpG-RK-Q1G">
@@ -84,8 +84,8 @@
                     <navigationItem key="navigationItem" id="CX7-8h-bcs"/>
                     <connections>
                         <outlet property="activityIndicator" destination="tpG-RK-Q1G" id="FqV-F2-flv"/>
-                        <outlet property="loginJaneButton" destination="2YD-CW-rUF" id="qnU-IZ-wzg"/>
-                        <outlet property="loginJoeButton" destination="ez8-xq-5g1" id="sUZ-m3-zJg"/>
+                        <outlet property="loginAliceButton" destination="2YD-CW-rUF" id="uUB-ZX-Hlw"/>
+                        <outlet property="loginBobButton" destination="ez8-xq-5g1" id="Bc1-ju-ZO6"/>
                         <outlet property="statusLabel" destination="bqC-f4-aMG" id="WNe-Ku-T6X"/>
                         <segue destination="AbE-XF-NXm" kind="show" identifier="showMessages" id="Z7b-9b-UBO"/>
                     </connections>

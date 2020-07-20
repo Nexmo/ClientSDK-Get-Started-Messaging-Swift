@@ -10,24 +10,24 @@ import Foundation
 
 
 enum User: String {
-    case jane = "Jane"
-    case joe = "Joe"
+    case alice = "Alice"
+    case bob = "Bob"
     
     var uuid: String {
         switch self {
-        case .jane:
-            return "" //TODO: swap with Jane's user uuid
-        case .joe:
-            return "" //TODO: swap with Joe's user uuid
+        case .alice:
+            return "" //TODO: swap with Alice's user uuid
+        case .bob:
+            return "" //TODO: swap with Bob's user uuid
         }
     }
     
     var jwt: String {
         switch self {
-        case .jane:
-            return "" //TODO: swap with a token for Jane
-        case .joe:
-            return "" //TODO: swap with a token for Joe
+        case .alice:
+            return "" //TODO: swap with a token for Alice
+        case .bob:
+            return "" //TODO: swap with a token for Bob
         }
     }
     
@@ -35,10 +35,10 @@ enum User: String {
     
     var interlocutor: User {
         switch self {
-        case .jane:
-            return User.joe
-        case .joe:
-            return User.jane
+        case .alice:
+            return User.bob
+        case .bob:
+            return User.alice
         }
     }
 }

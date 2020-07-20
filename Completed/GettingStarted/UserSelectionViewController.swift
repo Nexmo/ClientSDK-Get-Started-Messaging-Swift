@@ -11,8 +11,8 @@ import NexmoClient
 
 class UserSelectionViewController: UIViewController {
 
-    @IBOutlet weak var loginJaneButton: UIButton!
-    @IBOutlet weak var loginJoeButton: UIButton!
+    @IBOutlet weak var loginAliceButton: UIButton!
+    @IBOutlet weak var loginBobButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var statusLabel: UILabel!
     
@@ -28,12 +28,12 @@ class UserSelectionViewController: UIViewController {
         return .lightContent
     }
     
-    @IBAction func loginAsJane(_ sender: Any) {
-        loginAs(user: User.jane)
+    @IBAction func loginAsAlice(_ sender: Any) {
+        loginAs(user: User.alice)
     }
     
-    @IBAction func loginAsJoe(_ sender: Any) {
-        loginAs(user: User.joe)
+    @IBAction func loginAsBob(_ sender: Any) {
+        loginAs(user: User.bob)
     }
     
     //MARK: Setup Nexmo Client
@@ -48,8 +48,8 @@ class UserSelectionViewController: UIViewController {
             guard let self = self else { return }
             
             // blank state
-            self.loginJaneButton.alpha = 1
-            self.loginJoeButton.alpha = 1
+            self.loginAliceButton.alpha = 1
+            self.loginBobButton.alpha = 1
             self.activityIndicator.stopAnimating()
             self.statusLabel.alpha = 0
             
@@ -61,14 +61,14 @@ class UserSelectionViewController: UIViewController {
                 self.statusLabel.text = "Disconnected"
                 self.statusLabel.alpha = 1
             case .connecting:
-                self.loginJaneButton.alpha = 0
-                self.loginJoeButton.alpha = 0
+                self.loginAliceButton.alpha = 0
+                self.loginBobButton.alpha = 0
                 self.activityIndicator.startAnimating()
                 self.statusLabel.text = "Connecting as \(user.rawValue)..."
                 self.statusLabel.alpha = 1
             case .connected:
-                self.loginJaneButton.alpha = 0
-                self.loginJoeButton.alpha = 0
+                self.loginAliceButton.alpha = 0
+                self.loginBobButton.alpha = 0
                 self.statusLabel.text = "Connected as \(user.rawValue)."
                 self.statusLabel.alpha = 1
             @unknown default:
